@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "IG Media Downloader - Carregar Direto",
+  "name": "IG Media Downloader - Vercel Ready",
   "version": "0.4.1",
   "description": "Extensão para salvar referências e baixar mídias próprias ou autorizadas via página/API oficial, sem recompressão.",
   "action": {

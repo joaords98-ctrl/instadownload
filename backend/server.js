@@ -69,7 +69,9 @@ function extensionFor(file) {
 
 function absoluteDownloadUrl(req, mediaId, index) {
   const host = req.headers.host || `localhost:${PORT}`;
-  const proto = host.startsWith('localhost') || host.startsWith('127.0.0.1') ? 'http' : 'http';
+  const forwardedProto = req.headers['x-forwarded-proto'];
+  const isLocal = host.startsWith('localhost') || host.startsWith('127.0.0.1');
+  const proto = isLocal ? 'http' : (forwardedProto || 'https');
   return `${proto}://${host}/api/instagram/download?media_id=${encodeURIComponent(mediaId)}&index=${encodeURIComponent(index)}`;
 }
 
