@@ -1,0 +1,11 @@
+INSTADOWNLOAD PESSOAL - GitHub + Vercel
+
+PARA O VERCEL:
+- Suba o conteúdo desta pasta na raiz do repositório.
+- No Vercel, deixe Root Directory vazio.
+- Se antes estava como backend, apague esse valor e faça redeploy.
+
+PARA A EXTENSÃO DO CHROME:
+- Não carregue esta pasta principal no Chrome.
+- No Chrome, carregue a subpasta extension.
+- Alternativa mais fácil: use o ZIP separado instadownload-extension-chrome-v3.zip, pois nele o manifest.json fica direto na raiz.
