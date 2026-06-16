@@ -1,0 +1,64 @@
+INSTADOWNLOAD PESSOAL - GITHUB + VERCEL
+
+1) ATUALIZAR/SUBIR NO GITHUB
+
+- Baixe e extraia o ZIP.
+- Abra a pasta: instadownload-pessoal-github-vercel-v2
+- Selecione TODO o conteúdo de dentro dela.
+- No GitHub: Add file > Upload files.
+- Arraste os arquivos e pastas.
+- Clique em Commit changes.
+
+IMPORTANTE:
+- Não suba o ZIP.
+- O arquivo index.html precisa ficar na raiz do repositório.
+- A pasta extension precisa ficar na raiz também.
+
+Estrutura correta:
+
+index.html
+app.css
+app.js
+package.json
+vercel.json
+extension/
+README.md
+
+2) PUBLICAR NA VERCEL
+
+- Vercel > Add New > Project.
+- Escolha o repositório do GitHub.
+- Configuração recomendada:
+
+Framework Preset: Other
+Root Directory: deixar vazio
+Build Command: deixar vazio ou npm run build
+Output Directory: deixar vazio
+Install Command: deixar vazio ou npm install
+
+- Clique em Deploy.
+
+3) CONFIGURAR EXTENSÃO
+
+- Abra chrome://extensions.
+- Ative Modo do desenvolvedor.
+- Clique em Carregar sem compactação.
+- Selecione a pasta extension.
+- Abra as opções/configurações da extensão.
+- Em URL do painel, coloque a URL da Vercel:
+
+https://seu-projeto.vercel.app
+
+- Salve.
+
+4) USAR
+
+- Abra um post/Reel do Instagram.
+- Clique na extensão.
+- Clique em Detectar mídia.
+- Para fotos/capas expostas, clique em Baixar.
+- Clique em Enviar ao painel para organizar na biblioteca.
+
+OBSERVAÇÃO
+
+Quando o vídeo aparecer como blob/stream, esta versão salva a referência, mas não faz contorno da página.

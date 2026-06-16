@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InstaDownload Pessoal</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Ferramenta pessoal</p>
+        <h1>InstaDownload Pessoal</h1>
+        <p class="sub">Salve links, baixe fotos/capas expostas e organize referências do Instagram direto na Vercel, sem backend.</p>
+      </div>
+      <div class="badge">v1.0 seguro</div>
+    </section>
+
+    <section class="card composer">
+      <label for="igUrl">Cole o link do Instagram</label>
+      <div class="urlRow">
+        <input id="igUrl" type="url" placeholder="https://www.instagram.com/reel/..." autocomplete="off" />
+        <button id="saveLinkBtn" class="primary">Salvar referência</button>
+      </div>
+      <div class="hint">
+        Para detectar foto/capa em qualidade exposta, abra o post no Instagram e use a extensão Chrome inclusa no pacote.
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Importação da extensão</h2>
+        <p>Quando a extensão detectar mídias na página aberta, ela pode enviar tudo para este painel.</p>
+        <div class="actions">
+          <button id="copyDashboardUrl">Copiar URL deste painel</button>
+          <button id="clearImportQuery">Limpar importação da URL</button>
+        </div>
+        <p class="small">Dica: suba este projeto no GitHub e publique na Vercel. Para rodar local: <code>python -m http.server 5173</code>.</p>
+      </div>
+
+      <div class="card">
+        <h2>Exportar biblioteca</h2>
+        <p>Baixe seus registros para backup ou planilha.</p>
+        <div class="actions">
+          <button id="exportJsonBtn">Exportar JSON</button>
+          <button id="exportCsvBtn">Exportar CSV</button>
+          <button id="clearAllBtn" class="danger">Limpar tudo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="Buscar por link, projeto, legenda, nota..." />
+      <select id="statusFilter">
+        <option value="all">Todos os status</option>
+        <option value="referencia">Referência</option>
+        <option value="autorizado">Autorizado</option>
+        <option value="baixado">Baixado</option>
+        <option value="roteiro">Virar roteiro</option>
+      </select>
+    </section>
+
+    <section id="library" class="library"></section>
+
+    <template id="itemTemplate">
+      <article class="item card">
+        <div class="mediaPreview"></div>
+        <div class="itemBody">
+          <div class="itemTop">
+            <div>
+              <h3 class="itemTitle"></h3>
+              <a class="permalink" target="_blank" rel="noreferrer">Abrir no Instagram</a>
+            </div>
+            <span class="typePill"></span>
+          </div>
+
+          <div class="formGrid">
+            <label>Projeto/cliente
+              <input class="projectInput" placeholder="Ex: O Catarina, campanha, cliente..." />
+            </label>
+            <label>Status
+              <select class="statusInput">
+                <option value="referencia">Referência</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="baixado">Baixado</option>
+                <option value="roteiro">Virar roteiro</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Notas
+            <textarea class="notesInput" rows="3" placeholder="Ideia, gancho, legenda, observações..."></textarea>
+          </label>
+
+          <div class="detectedFiles"></div>
+
+          <div class="itemActions">
+            <button class="saveItemBtn">Salvar edição</button>
+            <button class="copyLinkBtn">Copiar link</button>
+            <button class="removeItemBtn danger">Remover</button>
+          </div>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

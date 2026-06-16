@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>InstaDownload Pessoal</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p>Companion</p>
+        <h1>InstaDownload</h1>
+      </div>
+      <button id="openOptions" title="Configurações">⚙</button>
+    </header>
+
+    <label class="auth">
+      <input id="authorized" type="checkbox" />
+      Tenho autorização para baixar/reutilizar este conteúdo.
+    </label>
+
+    <div class="actions">
+      <button id="detectBtn">Detectar mídia</button>
+      <button id="sendBtn" class="primary">Enviar ao painel</button>
+    </div>
+
+    <section id="summary" class="summary">Abra um post/Reel do Instagram e clique em detectar.</section>
+    <section id="files" class="files"></section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

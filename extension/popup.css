@@ -1,0 +1,19 @@
+:root { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #101828; }
+* { box-sizing: border-box; }
+body { margin: 0; width: 420px; background: #f6f7fb; }
+main { padding: 16px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+p { margin: 0; color: #667085; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+h1 { margin: 2px 0 0; font-size: 24px; letter-spacing: -0.05em; }
+button { border: 0; border-radius: 14px; padding: 11px 13px; font-weight: 900; background: #eef2f7; color: #101828; cursor: pointer; }
+button.primary { background: #111827; color: #fff; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.auth { display: flex; align-items: flex-start; gap: 10px; padding: 12px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 16px; font-weight: 800; margin-bottom: 12px; }
+.auth input { width: 18px; height: 18px; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.summary { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 12px; color: #475467; margin-bottom: 12px; }
+.files { display: grid; gap: 10px; max-height: 460px; overflow: auto; }
+.file { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 12px; display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+.file b { display: block; font-size: 14px; }
+.file small { display: block; margin-top: 3px; color: #667085; line-height: 1.25; }
+.warn { color: #b42318; }
