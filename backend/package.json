@@ -1,12 +1,12 @@
 {
   "name": "ig-media-official-backend",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "private": true,
-  "description": "Backend local para baixar mídia própria/autorizada do Instagram via Graph API sem recompressão.",
+  "description": "Backend para baixar mídia própria/autorizada do Instagram via Graph API sem recompressão.",
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check server.js"
+    "check": "node --check server.js && node --check api/[...path].js"
   },
   "engines": {
     "node": ">=18"
