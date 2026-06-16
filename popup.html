@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IG Media Library Oficial</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Instagram</p>
+        <h1>IG Media Library</h1>
+        <p class="muted">Salve referências e baixe mídia própria/autorizada sem recompressão.</p>
+      </div>
+      <span class="badge" id="pageType">---</span>
+    </header>
+
+    <section class="card current">
+      <div class="thumb" id="thumbBox">
+        <span>Sem capa</span>
+      </div>
+      <div class="content">
+        <h2 id="title">Abra um Reel ou post do Instagram</h2>
+        <p id="desc">Depois clique em “Capturar página”.</p>
+        <button class="primary" id="captureBtn">Capturar página</button>
+      </div>
+    </section>
+
+    <section class="download-box">
+      <div class="download-head">
+        <div>
+          <h3>Download da mídia</h3>
+          <p id="mediaStatus">Detecte fotos/vídeos da página atual.</p>
+        </div>
+        <span class="mini-badge" id="mediaCount">0</span>
+      </div>
+
+      <label class="check strong">
+        <input type="checkbox" id="authorized" />
+        Tenho autorização para baixar/reutilizar este conteúdo.
+      </label>
+
+      <div class="actions compact">
+        <button id="detectMediaBtn">Detectar mídia</button>
+        <button class="primary" id="downloadBestBtn">Baixar melhor qualidade</button>
+      </div>
+
+      <div class="api-download">
+        <button class="primary alt" id="apiDownloadBtn">Baixar via API oficial</button>
+        <p class="hint">Use quando o vídeo aparecer como blob/stream. Exige backend configurado e conta dona/autorizada.</p>
+      </div>
+
+      <div id="mediaList" class="media-list"></div>
+    </section>
+
+    <section class="form">
+      <label>
+        Projeto / cliente
+        <input id="project" placeholder="Ex.: O Catarina, campanha SC, GC Eventos" />
+      </label>
+
+      <label>
+        Status
+        <select id="status">
+          <option value="referencia">Referência</option>
+          <option value="roteiro">Virar roteiro</option>
+          <option value="autorizado">Autorizado para uso</option>
+          <option value="postado">Já postado</option>
+        </select>
+      </label>
+
+      <label>
+        Observações
+        <textarea id="notes" placeholder="Ex.: bom gancho, tema político, pedir autorização, adaptar texto..."></textarea>
+      </label>
+
+      <div class="actions">
+        <button class="primary" id="saveBtn">Salvar na biblioteca</button>
+        <button id="copyBtn">Copiar link</button>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <button id="exportCsvBtn">Exportar CSV</button>
+      <button id="exportJsonBtn">Exportar JSON</button>
+      <button id="optionsBtn">Config</button>
+    </section>
+
+    <section>
+      <h3>Últimos salvos</h3>
+      <div id="items" class="items"></div>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
